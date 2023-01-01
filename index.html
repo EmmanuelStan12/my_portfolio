@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="show">
+            <div class="nav_header">
+                <span>My</span>
+                <span>Portfolio</span>
+            </div>
+            <ul class="nav_options">
+                <li class="nav_option active"><a href="#home">Home</a></li>
+                <li class="nav_option"><a href="#about">About</a></li>
+                <li class="nav_option"><a href="#education">Education</a></li>
+                <li class="nav_option"><a href="#skills">Skills</a></li>
+                <li class="nav_option"><a href="#experience">Experience</a></li>
+                <li class="nav_option"><a href="#projects">Projects</a></li>
+                <li class="nav_option"><a href="#certificates">Certificates</a></li>
+            </ul>
+            <button class="menu">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <div class="home_details">
+                <h3>Find Talented Software Engineer</h3>
+                <p>I'm a Software Developer that specializes in frontend development. I'm passionate about technology and willing to learn new things. I'm passionate about providing solutions to problems and making visions come to reality.</p>
+                <a href="#about">About me</a>
+            </div>
+            <div class="home_picture">
+                <figure>
+                    <img src="./assets/1.jpg" alt="ProfileImage">
+                </figure>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h3 class="section_header">About Me</h3>
+            <div class="about_content">
+                <div class="about_details">
+                    <h4>I'm Emmanuel Amadiegwu</h4>
+                    <p>I'm a Software Developer that specializes in frontend development. I'm passionate about technology and willing to learn new things. I'm passionate about providing solutions to problems and making visions come to reality.</p>
+                    <div class="social_media_buttons">
+                        <a href="https://www.linkedin.com/in/emmanuel-amadiegwu-033b8917a/" class="social_media_button">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                        <a href="#" class="social_media_button">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="about_picture">
+                    <div class="carousel_container">
+                        <figure class="show">
+                            <img src="./assets/2.jpg" alt="ProfileImage">
+                        </figure>
+                        <figure class="show">
+                            <img src="./assets/3.jpg" alt="ProfileImage">
+                        </figure>
+                        <figure>
+                            <img src="./assets/4.jpg" alt="ProfileImage">
+                        </figure>
+                        <figure>
+                            <img src="./assets/5.jpg" alt="ProfileImage">
+                        </figure>
+                        <figure>
+                            <img src="./assets/6.jpg" alt="ProfileImage">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="education" id="education">
+            <h3 class="section_header">Education</h3>
+            <div class="education_content">
+                <div class="education_card">
+                    <img src="https://images.unsplash.com/photo-1581092163144-b7ae3c00adbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8RWxlY3Ryb25pYyUyMGFuZCUyMGNvbXB1dGVyJTIwZW5naW5lZXJpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Electronic and Computer Engineering">
+                    <div class="education_card_content">
+                        <h5>Electronic and Computer Engineering</h5>
+                        <p>Nnamdi Azikiwe University, Awka</p>
+                        <p class="duration">10/2017 - 04/2023</p>
+                        <p class="course_title">Courses - </p>
+                        <div class="courses">
+                            <div class="course">Embedded Systems</div>
+                            <div class="course">Networking</div>
+                            <div class="course">Electronics</div>
+                            <div class="course">Software programming</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education_card">
+                    <img class="it_support" src="https://images.credly.com/size/340x340/images/ae2f5bae-b110-4ea1-8e26-77cf5f76c81e/GCC_badge_IT_Support_1000x1000.png" alt="Electronic and Computer Engineering">
+                    <div class="education_card_content">
+                        <h5>Google IT Support</h5>
+                        <p>Google</p>
+                        <p class="duration">06/2022 - 08/2022</p>
+                        <p class="course_title">Courses - </p>
+                        <div class="courses">
+                            <div class="course">Technical Fundamentals</div>
+                            <div class="course">Computer Networking</div>
+                            <div class="course">Operating Systems</div>
+                            <div class="course">System Administration</div>
+                            <div class="course">IT Security</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <h3 class="section_header">Skills</h3>
+            <div class="skills_content">
+                <div class="skills_card">
+                    <h5>HTML</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="69">
+                </div>
+                <div class="skills_card">
+                    <h5>CSS</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="65">
+                </div>
+                <div class="skills_card">
+                    <h5>Javascript</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="80">
+                </div>
+                <div class="skills_card">
+                    <h5>C</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="84">
+                </div>
+                <div class="skills_card">
+                    <h5>Operating Systems</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="74">
+                </div>
+                <div class="skills_card">
+                    <h5>Java</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="65">
+                </div>
+                <div class="skills_card">
+                    <h5>Kotlin</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="85">
+                </div>
+                <div class="skills_card">
+                    <h5>Android</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="80">
+                </div>
+                <div class="skills_card">
+                    <h5>Jetpack</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="75">
+                </div>
+                <div class="skills_card">
+                    <h5>React</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="80">
+                </div>
+                <div class="skills_card">
+                    <h5>Redux</h5>
+                    <input type="range" name="range" class="slider" id="range" disabled min="1" max="100" value="60">
+                </div>
+            </div>
+        </section>
+        <section class="experience" id="experience">
+            <h3 class="section_header">Experience</h3>
+            <div class="experience_content">
+                <div class="experience_item">
+                    <div class="experience_item_details">
+                        <h5>Front-end Developer Intern</h5>
+                        <h5>Flexisaf Edusoft Limited</h5>
+                        <p>09/2022 - 12/2022</p>
+                        <p>Achievements/Tasks</p>
+                        <ul class="achievements">
+                            <li class="achievement">- Implemented a fully responsive website with HTML and CSS.</li>
+                            <li class="achievement">- Built a mini CSS library with SCSS/SASS for styling and reusability.</li>
+                            <li class="achievement">- Built a mini CSS Library with Styled Components on React that can be reused across your app.</li>
+                            <li class="achievement">- Built a full Intern Resource management application using React, Redux and Firebase.</li>    
+                        </ul>
+                    </div>
+                    <div class="experience_item_image">
+                        <img src="data:image/jpeg;base64,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" alt="Flexisaf Edusoft limited">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h3 class="section_header">Projects</h3>
+            <div class="projects_content">
+                <div class="project_card">
+                    <img src="https://play-lh.googleusercontent.com/_9Jfeav5_MPNhxr988YS7a0NDLklQy9i8hpp3Bxr1l-0FvKe-UW2pgMnGr9gFRusI7E" alt="Electronic and Computer Engineering">
+                    <div class="project_card_content">
+                        <h5>Music Player Application</h5>
+                        <p class="duration">04/2022 - 05/2022</p>
+                        <p class="description">Utilized Jetpack compose and other popular jetpack libraries with
+                            Exoplayer to create a music application with MVVM architectural
+                            pattern.</p>
+                        <p class="course_title">Technologies Used - </p>
+                        <div class="courses">
+                            <div class="course">Exoplayer</div>
+                            <div class="course">Room Database</div>
+                            <div class="course">Dagger Hilt</div>
+                            <div class="course">Jetpack Compose</div>
+                        </div>
+                        <a href="https://github.com/EmmanuelStan12/MusicApplicationWithJetpackCompose" class="show_project">Github Project link</a>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <img src="https://previews.123rf.com/images/dmvector/dmvector1904/dmvector190400126/148159463-shield-security-with-lock-symbol-protection-safety-password-security-vector-icon-illustration-firewa.jpg" alt="Electronic and Computer Engineering">
+                    <div class="project_card_content">
+                        <h5>Password Manager</h5>
+                        <p class="duration">08/2022 - Present</p>
+                        <p class="description">Utilizing Advanced Encryption Techniques (AES) together with other layers of security to implement a secure password manager.</p>
+                        <p class="course_title">Technologies Used - </p>
+                        <div class="courses">
+                            <div class="course">AES</div>
+                            <div class="course">Symmetric Encryption</div>
+                            <div class="course">Dagger Hilt</div>
+                            <div class="course">Jetpack Compose</div>
+                            <div class="course">Room Database</div>
+                        </div>
+                        <a href="https://github.com/EmmanuelStan12/PasswordManager" class="show_project">Github Project link</a>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <img src="https://www.wikihow.com/images/thumb/1/18/Take-Better-Notes-Step-1-Version-2.jpg/v4-460px-Take-Better-Notes-Step-1-Version-2.jpg.webp" alt="Electronic and Computer Engineering">
+                    <div class="project_card_content">
+                        <h5>Note Taking Application</h5>
+                        <p class="duration">09/2021 - 09/2021</p>
+                        <p class="description">Feature rich note taking application built with MVVM architectural
+                            pattern with Jetpack compose, Room, Dagger Hilt and other
+                            Jetpack libraries.</p>
+                        <p class="course_title">Technologies Used - </p>
+                        <div class="courses">
+                            <div class="course">MVVM</div>
+                            <div class="course">Dagger Hilt</div>
+                            <div class="course">Jetpack Compose</div>
+                            <div class="course">Room Database</div>
+                        </div>
+                        <a href="https://github.com/EmmanuelStan12/MyNotesApplication" class="show_project">Github Project link</a>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <img src="https://www.business-management-degree.net/wp-content/uploads/2021/04/shutterstock_331839509.jpg" alt="Electronic and Computer Engineering">
+                    <div class="project_card_content">
+                        <h5>Intern Resource Center Application</h5>
+                        <p class="duration">10/2023 - 11/2023</p>
+                        <p class="description">Intern resource center application built to help interns to access resources and also helps host company better manage interns and intern's resources.</p>
+                        <p class="course_title">Technologies Used - </p>
+                        <div class="courses">
+                            <div class="course">Redux</div>
+                            <div class="course">React</div>
+                            <div class="course">Styled-Components</div>
+                            <div class="course">NodeJS</div>
+                        </div>
+                        <div class="">
+                            <a href="https://github.com/EmmanuelStan12/resource_center_application" class="show_project">Github Project link</a>
+                            <a href="https://intercorp.netlify.app/" class="show_project">Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="certificates" id="certificates">
+            <h3 class="section_header">Certificates</h3>
+            <div class="certificates_content">
+                <div class="certificate_card">
+                    <div class="certificate_card_picture">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/220px-Coursera-Logo_600x600.svg.png" alt="Coursera" srcset="">
+                    </div>
+                    <div class="certificate_card_content">
+                        <h6 class="certificate_title">Google IT Support Specialization</h6>
+                        <p class="certificate_issuer">Coursera</p>
+                        <p class="issued_date">September 2022</p>
+                        <p class="credential_id">Credential ID: SUR99ZGUM3S2</p>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/SUR99Z6UM3S2">Show Credential</a>
+                    </div>
+                </div>
+                <div class="certificate_card">
+                    <div class="certificate_card_picture">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/220px-Coursera-Logo_600x600.svg.png" alt="Coursera" srcset="">
+                    </div>
+                    <div class="certificate_card_content">
+                        <h6 class="certificate_title">Introduction to Android Mobile Application Development</h6>
+                        <p class="certificate_issuer">Coursera</p>
+                        <p class="issued_date">October 2022</p>
+                        <p class="credential_id">Credential ID: 3FXM3LZY6E8M</p>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/3FXM3LZY6E8M">Show Credential</a>
+                    </div>
+                </div>
+                <div class="certificate_card">
+                    <div class="certificate_card_picture">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/220px-Coursera-Logo_600x600.svg.png" alt="Coursera" srcset="">
+                    </div>
+                    <div class="certificate_card_content">
+                        <h6 class="certificate_title">Kotlin for Java Developers</h6>
+                        <p class="certificate_issuer">Coursera</p>
+                        <p class="issued_date">October 2022</p>
+                        <p class="credential_id">Credential ID: 32PYTTY8UX88</p>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/32PYTTY8UX88">Show Credential</a>
+                    </div>
+                </div>
+                <div class="certificate_card">
+                    <div class="certificate_card_picture">
+                        <img src="https://pbs.twimg.com/profile_images/1542609847908290563/Q8Pk1FGm_400x400.jpg" alt="Coursera" srcset="">
+                    </div>
+                    <div class="certificate_card_content">
+                        <h6 class="certificate_title">Cloud Developer</h6>
+                        <p class="certificate_issuer">Udacity</p>
+                        <p class="issued_date">August 2022</p>
+                        <p class="credential_id">Credential ID: GZN3C97W</p>
+                        <a href="https://confirm.udacity.com/GZN3C97W">Show Credential</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <p>Thank you for the Opportunity, I'm eager to bring my abilities and skills to this new position.</p>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

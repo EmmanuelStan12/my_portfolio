@@ -1,0 +1,779 @@
+:root {
+    --base-font-size: 1rem;
+    --background-color: #f0f0f0;
+    --primary-text-color: #121212;
+    --primary-color: #2B7CE8;
+    --secondary-color: #FF4758;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+*, *::before, *::after {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 17px;
+    position: fixed;
+    width: 100%;
+    background-color: whitesmoke;
+    z-index: 99;
+    box-shadow: 0px 1px 7px 1px rgba(90, 90, 90, 0.2);
+    transition: all 300ms ease;
+}
+
+nav.hide {
+    transform: translateY(-70px);
+}
+
+nav.show {
+    transform: translateY(0px);
+}
+
+nav > ul {
+    display: flex;
+    gap: 19px;
+
+}
+
+.nav_options > li {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav_options > li > a {
+    text-decoration: none;
+    font-style: bold;
+    color: var(--primary-text-color);
+}
+
+.nav_options > li::before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    background-color: var(--primary-color);
+    height: 2px;
+    position: absolute;
+    overflow: hidden;
+    transition: all 300ms ease;
+    transform: translateX(-100px);
+}
+
+.nav_options > li:hover::before {
+    transform: translateX(0px);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    padding: 0px 25px;
+}
+
+section.home {
+    display: flex;
+    gap: 20px;
+}
+
+.about_content {
+    display: flex;
+    gap: 5px;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.home_details {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.home_picture, .about_picture {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_details > h3, .about_details > h3 {
+    font-size: 3rem;
+}
+
+.home_details > p, .about_details > p {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.home a, button {
+    outline: none;
+    align-self: flex-start;
+    border: 0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: whitesmoke;
+    box-shadow: 2px 1px 7px 2px rgba(255, 133, 152, 0.6);
+    transition: all 300ms ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover {
+    box-shadow: 3px 1px 7px 2px rgba(255, 133, 152, 0.9);
+}
+
+.home_picture > figure, .about_picture > figure {
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    box-shadow: 1px 4px 15px 6px rgba(22, 22, 22, 0.2);
+    overflow: hidden;
+}
+
+.home_picture figure {
+    background: linear-gradient(180deg, #FBF3D0, #D0B291);
+}
+
+.home_picture > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 0 50px 50px #D0B291;
+}
+
+.about {
+    height: fit-content;
+}
+
+.about_picture {
+    position: relative;
+}
+
+.about_picture .next_button {
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.next_button ion-icon {
+    font-size: 1.3rem;
+}
+
+.about_picture figure {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.about_picture figure.show {
+    opacity: 1;
+}
+
+.carousel_container {
+    height: 340px;
+    width: 340px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about_details {
+    align-items: flex-start;
+}
+
+.about_picture figure > img {
+    height: 340px;
+    width: 340px;
+    object-fit: cover;
+}
+
+@keyframes picture_animation {
+    0% {
+        transform: translateX(340px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(680px);
+    }
+}
+
+section > .section_header {
+    font-size: 3rem;
+    position: relative;
+}
+
+section > .section_header::before {
+    content: '';
+    width: 80%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.education_content {
+    padding: 20px 0px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.education_card {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 350px;
+    height: fit-content;
+    padding-bottom: 10px;
+    border: 0.3px solid #5e5e5e;
+}
+
+.education_card > img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.education_card_content {
+    padding: 0px 10px;
+}
+
+.education_card_content > h5 {
+    font-size: 1.4rem;
+}
+
+.education_card_content > p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #5e5e5e;
+}
+
+.education_card_content > .duration {
+    font-size: 0.8rem;
+}
+
+.education_card_content > .course_title {
+    color: #121212;
+}
+
+.education_card_content > .courses {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.education_card_content > .courses > .course {
+    padding: 5px 8px;
+    background-color: #7a7a7a;
+    color: whitesmoke;
+    font-size: 0.75rem;
+    border-radius: 5px;
+}
+
+.it_support {
+    object-fit: fill;
+}
+
+.skills {
+    height: fit-content;
+}
+
+.skills_content {
+    gap: 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills_card {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid rgba(22, 22, 22, 0.2);
+    width: fit-content;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 5px; /* Specified height */
+    border-radius: 4px;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: var(--primary-color); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: var(--primary-color); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.experience {
+    height: fit-content;
+}
+
+.experience_content {
+    padding: 20px 0px;
+}
+
+.experience_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience_item_details > h5:first-child {
+    font-size: 1.4rem;
+}
+
+.experience_item_details > h5:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.experience_item_details > p {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.experience_item_details > ul > li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.experience_item_image > img {
+    width: 200px;
+    height: 200px;
+}
+
+.projects_content {
+    padding: 20px 0px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.project_card {
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    height: 340px;
+    height: fit-content;
+    border: 0.3px solid #5e5e5e;
+}
+
+.project_card_content {
+    padding: 0 10px;
+}
+
+.project_card_content > h5 {
+    font-size: 1.4rem;
+}
+
+.project_card_content > p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #5e5e5e;
+    font-weight: 300;
+}
+
+.project_card_content > .duration {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.project_card_content > .course_title {
+    color: #121212;
+    font-weight: 300;
+}
+
+.project_card_content > .courses {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.project_card_content > .courses > .course {
+    padding: 5px 8px;
+    background-color: #7a7a7a;
+    color: whitesmoke;
+    font-size: 0.75rem;
+    border-radius: 5px;
+}
+
+.project_card > img {
+    width: 300px;
+    height: 340px;
+    object-fit: cover;
+}
+
+.certificates_content {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.certificate_card {
+    display: flex;
+    border-bottom: 1px solid #d3d3d3;
+    gap: 10px;
+}
+
+.certificate_card h6 {
+    font-size: 1.2rem;
+}
+
+.certificate_card p:nth-child(3), .certificate_card p:nth-child(4) {
+    color: #5e5e5e;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.certificate_card a, .show_project {
+    padding: 7px 10px;
+    border: 0.5px solid #7a7a7a;
+    text-decoration: none;
+    color: #121212;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    width: fit-content;
+    transition: all 300ms ease;
+}
+
+.certificate_card a:hover, .show_project:hover {
+    color: whitesmoke;
+    background-color: #2b2b2b;
+}
+
+.show_project {
+    margin-top: 10px;
+}
+
+.certificate_card .certificate_card_picture {
+    width: 200px;
+    height: 200px;
+}
+
+.certificates {
+    height: fit-content;
+}
+
+.certificate_card_picture img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.certificate_card_content {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.contact_content {
+    display: flex;
+    padding: 20px 0px;
+    gap: 10px;
+}
+
+.contact_picture {
+    flex: 1;
+}
+
+.contact_picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact_form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact_form > form {
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+}
+
+label span {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+label input {
+    padding: 7px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+}
+
+label textarea {
+    padding: 7px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+}
+
+.about h4 {
+    font-size: 1.9rem;
+    margin: 0;
+    padding: 0;
+}
+
+.social_media_buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.social_media_buttons a {
+    text-decoration: none;
+    color: #121212;
+    padding: 10px;
+    vertical-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.social_media_buttons a:first-child {
+    background-color: #0B66C3;
+}
+
+.social_media_buttons a:nth-child(2) {
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+.social_media_buttons ion-icon {
+    font-size: 1.4rem;
+    color: whitesmoke;
+}
+
+.about_details {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projects {
+    height: fit-content;
+}
+
+.achievement, .description {
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.nav_header span:first-child {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.nav_header span:nth-child(2) {
+    color: #121212;
+    font-size: 1.2rem;
+}
+
+.nav_options > li.active::before {
+    transform: translateX(0px);
+}
+
+.menu {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.menu ion-icon {
+    font-size: 1.3rem;
+}
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+}
+
+.footer p {
+    color: whitesmoke;
+}
+
+@media (max-width: 780px) {
+    .nav_options {
+        position: fixed;
+        background-color: whitesmoke;
+        width: 100%;
+        top: 60px;
+        flex-direction: column;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-350px);
+        z-index: -99;
+        transition: all 300ms ease-out;
+    }
+
+    .nav_options.active {
+        transform: translateY(0);
+        z-index: -9;
+    }
+    .nav_options li {
+        display: block;
+        width: fit-content;
+    }
+    .menu {
+        display: flex;
+    }
+    .nav_header {
+        flex: 1;
+        background-color: whitesmoke;
+    }
+    .home {
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 70px;
+    }
+    .home_picture {
+        height: 200px;
+        display: none;
+    }
+
+    .education {
+        height: fit-content;
+    }
+    .education_content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 605px) {
+    .project_card {
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .project_card > img {
+        width: 100%;
+    }
+
+    .contact_picture {
+        display: none;
+    }
+
+    .about_content {
+        flex-direction: column;
+    }
+
+    .experience_item_image {
+        display: none;
+    }
+}
+
+@media (max-width: 427px) {
+    .certificate_card {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .about_picture {
+        width: 100%;
+    }
+
+    .carousel_container {
+        width: 100%;
+    }
+}
